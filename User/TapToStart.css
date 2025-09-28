@@ -1,0 +1,59 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Background */
+.container {
+  background: url('background.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top bar */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  font-size: 12px;
+  color: #999;
+}
+.logo {
+  height: 50px;   /* logo is 50px tall */
+  width: auto;    /* keeps correct proportions */
+}
+
+.left-text {
+  font-weight: 500;
+}
+
+.right-info {
+  text-align: right;
+  line-height: 1.4;
+}
+
+/* Centered text */
+.center-content {
+  flex: 1; /* take available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  align-items: center;     /* horizontal center */
+  text-align: center;
+  color: black;
+}
+
+.center-content h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.center-content p {
+  font-size: 14px;
+  margin-top: 8px;
+}
