@@ -1,4 +1,3 @@
-// Update Philippine Time & Date
 function updatePhilippineTime() {
   const now = new Date();
 
@@ -21,11 +20,26 @@ function updatePhilippineTime() {
   document.getElementById("ph-time").textContent = time;
 }
 
-// Run immediately and update every second
+document.querySelector(".proceed-btn").addEventListener("click", () => {
+
+  const selected = Array.from(document.querySelectorAll('input[type="checkbox"]:checked'))
+                       .map(checkbox => checkbox.value);
+
+  localStorage.setItem("selectedDepartments", JSON.stringify(selected));
+
+  window.location.href = "../ProfileRegistration/ProfileRegistration.html";
+});
+
+
 updatePhilippineTime();
 setInterval(updatePhilippineTime, 1000);
 
-// Go Back Button (make sure your div has id="back-btn")
-document.getElementById("back-btn").addEventListener("click", () => {
-  window.location.href = "TapToStart.html";
+document.querySelector(".proceed-btn").addEventListener("click", () => {
+  window.location.href = "../ProfileRegistration/ProfileRegistration.html"; 
 });
+
+
+document.getElementById("back-btn").addEventListener("click", () => {
+  window.location.href = "../TapToStart/TapToStart.html";
+});
+

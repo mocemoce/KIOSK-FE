@@ -16,11 +16,9 @@ function updatePhilippineTime() {
 
   const now = new Date();
 
-  // Format date and time
   const date = new Intl.DateTimeFormat("en-US", optionsDate).format(now);
   const time = new Intl.DateTimeFormat("en-US", optionsTime).format(now);
 
-  // Update DOM
   document.getElementById("ph-date").textContent = date;
   document.getElementById("ph-time").textContent = time;
 }
@@ -30,6 +28,6 @@ setInterval(updatePhilippineTime, 1000);
 
 
 document.querySelector(".container").addEventListener("click", () => {
-  window.location.href = "THomePage.html";
+  window.location.href = "../THomePage/THomePage.html";
 
 });
