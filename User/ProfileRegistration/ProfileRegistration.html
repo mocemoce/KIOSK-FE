@@ -3,43 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profile Registration</title>
+  <title>Z-Kiosk Pro</title>
   <link rel="stylesheet" href="ProfileRegistration.css">
 </head>
 <body>
-  <div class="container">
-    <!-- Top Bar -->
-    <div class="top-bar">
-      <img src="logo.png" alt="Logo" class="logo">
-      <div class="right-info">
-        <div id="ph-date">09/22/2025</div>
-        <div id="ph-time">11:00:09 AM</div>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo-section">
+      <img src="../logo.png" alt="ZionTech Logo" class="logo">
+      <span class="title">Z-Kiosk Pro</span>
+    </div>
+    <div class="datetime">
+      <p id="ph-date">09/22/2025</p>
+      <p id="ph-time">11:00:09 AM</p>
+    </div>
+  </header>
+
+  <div class="back-container">
+    <button class="back-btn">Back</button>
+  </div>
+
+  <!-- Main Form -->
+  <main class="main-content">
+    <!-- Confirmation Popup (hidden by default) -->
+    <div id="confirmation-popup" class="popup-overlay">
+      <div class="popup-content">
+        <p>Before Selecting the Proceed, Please check the information if correct.  </p>
+        <button id="popup-ok-btn">Ok</button>
       </div>
     </div>
 
-    <!-- Registration Box -->
-    <div class="registration-box">
-      <h2>Profile Registration</h2>
+    <div class="form-container">
+      <h2>Patient Registration</h2>
 
-      <label for="name">Name:</label>
+      <label for="name">Name</label>
       <input type="text" id="name" placeholder="Enter your name (Optional)">
 
-      <label for="contact">Contact Number:</label>
+      <label for="contact">Contact Number</label>
       <input type="text" id="contact" placeholder="Enter your phone number (Optional)">
 
-      <label for="department">Selected Department:</label>
-      <input type="text" id="department" value="General Consultation - GC-001" readonly>
+      <label for="department">Selected Department</label>
+      <textarea id="department" readonly></textarea>
 
-      <div class="button-group">
-        <button class="back-btn">Go back</button>
-        <button class="proceed-btn">Proceed</button>
+      <p class="note">
+        Please click the priority if Senior Citizen,<br>
+        PWD and/or Pregnant,
+      </p>
+
+      <div class="priority-section">
+        <input type="checkbox" id="priority">
+        <label for="priority">Priority</label>
       </div>
-    </div>
 
-    <!-- Footer -->
-    <footer>
-      Powered by ZionTech and ZeroDays
-    </footer>
-  </div>
+      <button class="proceed-btn">Proceed</button>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    Powered by <b>ZionTech</b>
+  </footer>
+
+  <script src="ProfileRegistration.js"></script>
 </body>
 </html>
