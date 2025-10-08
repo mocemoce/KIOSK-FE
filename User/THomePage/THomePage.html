@@ -3,47 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Transaction Page</title>
+  <title>Z-Kiosk Pro</title>
   <link rel="stylesheet" href="THomePage.css">
 </head>
 <body>
-  <div class="container">
-    <div class="top-bar">
-        <img src="../logo.png" alt="Logo" class="logo">
-      <div class="right-info">
-        <div id="ph-date"></div>
-        <div id="ph-time"></div>
-      </div>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo-section">
+      <img src="../logo.png" alt="ZionTech Logo" class="logo">
+      <span class="title">Z-Kiosk Pro</span>
     </div>
-
-    <div id="back-btn" class="back-btn">
-      ← Go back
+    <div class="datetime">
+      <p id="ph-date">09/22/2025</p>
+      <p id="ph-time">11:00:09 AM</p>
     </div>
+  </header>
 
-    <div class="transaction-title">
-      <h2 class="selectdept">SELECT THE DEPARTMENT</h2>
-    </div>
-
-    <div class="department-list">
-      <label>General Consultation <input type="checkbox" checked></label>
-      <label>Maternal and Child Health Service <input type="checkbox"></label>
-      <label>Laboratory Services <input type="checkbox"></label>
-      <label>Dental Services <input type="checkbox"></label>
-      <label>Pharmacy and Dispensing Area <input type="checkbox"></label>
-      <label>Animal Bite Treatment Center <input type="checkbox"></label>
-      <label>Medical Records <input type="checkbox"></label>
-    </div>
-
-
-    <div class="proceed-container">
-      <button class="proceed-btn">Proceed</button>
-    </div>
-
-    <footer>
-      Powered by ZionTech and ZeroDays
-    </footer>
-
+<div class="back-container">
+    <button class="back-btn">Back</button>
   </div>
+
+  <main class="main-container">
+    <div class="main-header">
+      <h2 class="section-title">SELECT DEPARTMENT (S)</h2>
+    </div>
+
+    <div class="departments">
+      <button class="dept-btn">General Consultation</button>
+      <button class="dept-btn">Maternal and Child Health Services</button>
+      <button class="dept-btn">Laboratory Services</button>
+      <button class="dept-btn">Dental Services</button>
+      <button class="dept-btn">Animal Bite Treatment Center</button>
+      <button class="dept-btn">Medical Records</button>
+      <p class="selection-info">       </p>
+    </div>
+
+    <button class="proceed-btn">Proceed</button>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    Powered by <b>ZionTech</b>
+  </footer>
 
   <script src="THomePage.js"></script>
 </body>

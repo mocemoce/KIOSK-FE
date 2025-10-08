@@ -1,65 +1,247 @@
-body, html {
+/* =========================
+   🌐 Base Styles
+========================= */
+html, body {
   margin: 0;
   padding: 0;
+  width: 100%;
   height: 100%;
+  overflow: hidden;
   font-family: Arial, sans-serif;
-}
-
-
-.container {
   background: url('background.jpg') no-repeat center center/cover;
-  height: 100vh;
+  color: #000;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.top-bar {
+/* =========================
+   🟦 Header (Copied from THomePage)
+========================= */
+.header {
+  width: 100%;
+  background-color: #003366;
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
-  font-size: 12px;
-  color: #000000;
+  padding: 2.5rem 3rem;
+  box-sizing: border-box;
 }
+
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
-  height: 50px;   
-  width: auto;    
+  width: 150px;
+  height: auto;
+  background-color: white;
+  border-radius: 16px;
+  padding: 10px;
+  margin-right: 20px;
 }
 
-.left-text {
-  font-weight: 500;
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 
-.right-info {
-  text-align: right;
-  line-height: 1.4;
-}
-
-
-.center-content {
-  flex: 1; 
+.datetime {
   display: flex;
   flex-direction: column;
-  justify-content: center; 
-  align-items: center;     
-  text-align: center;
-  color: black;
+  align-items: flex-start;
+  text-align: left;
+  font-size: 1.6rem;
+  line-height: 1.6;
 }
 
-.center-content h1 {
-  font-size: 48px;
+.datetime p {
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   🟨 Center Content
+========================= */
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.main-content h1 {
+  font-size: 6rem;
   font-weight: bold;
   margin: 0;
+  color: #002855;
 }
 
-.center-content p {
-  font-size: 14px;
-  margin-top: 8px;
-}
-footer {
-  text-align: center;
-  font-size: 12px;
-  padding: 12px 0;
-  color: #666;
+.main-content p {
+  font-size: 2.8rem;
   margin-top: 20px;
+  color: #003366;
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.4;
+  }
+}
+
+/* =========================
+   🦶 Footer
+========================= */
+.footer {
+  font-size: 1.8rem;
+  color: #333;
+  text-align: center;
+  padding: 20px 0;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 100%;
+}
+
+/* =========================
+   💻 For 1080x1920 (Full HD Vertical)
+========================= */
+@media (min-width: 1000px) and (min-height: 1800px) {
+  html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  /* Header */
+  .header {
+    padding: 2rem 3rem;
+  }
+
+  .logo {
+    width: 130px;
+    border-radius: 14px;
+    padding: 8px;
+  }
+
+  .title {
+    font-size: 2.6rem;
+  }
+
+  .datetime {
+    font-size: 1.8rem;
+    line-height: 1.4;
+  }
+
+  /* Main */
+  .main-content h1 {
+    font-size: 8rem;
+  }
+
+  .main-content p {
+    font-size: 3rem;
+  }
+
+  /* Footer */
+  .footer {
+    font-size: 1.6rem;
+    padding: 30px 0;
+  }
+}
+
+/* =========================
+   📱 Responsive Adjustments
+========================= */
+@media (max-width: 1080px) {
+  .logo {
+    width: 100px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .datetime {
+    font-size: 1.3rem;
+  }
+
+  .main-content h1 {
+    font-size: 5rem;
+  }
+
+  .main-content p {
+    font-size: 2rem;
+  }
+
+  .footer {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 80px;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .datetime {
+    font-size: 1rem;
+  }
+
+  .main-content h1 {
+    font-size: 4rem;
+  }
+
+  .main-content p {
+    font-size: 1.6rem;
+  }
+
+  .footer {
+    font-size: 1rem;
+  }
+}
+/* 💻 For 1080x1920 screens */
+@media (min-width: 1000px) and (min-height: 1800px) {
+ /* ===== Header ===== */
+  .header {
+    width: 100%;
+    background-color: #003366;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem; /* Reduced padding to save space */
+    box-sizing: border-box;
+    flex-shrink: 0;
+  }
+
+  .logo {
+    width: 130px;
+    border-radius: 14px;
+    padding: 8px;
+  }
+
+  .title {
+    font-size: 2.6rem;
+  }
+
+  .datetime {
+    font-size: 1.8rem;
+    line-height: 1.4;
+  }
+   /* ===== Footer ===== */
+  .footer {
+    font-size: 1.6rem;
+    padding: 20px 0;
+    margin: 0;
+    flex-shrink: 0;
+  }
 }
