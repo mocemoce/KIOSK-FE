@@ -45,7 +45,7 @@ window.addEventListener("DOMContentLoaded", () => {
       popupShown = true;
     } else {
       // second click: go to next page
-      window.location.href = "../NextPage/NextPage.html"; // change to your page
+      window.location.href = "../Reciept/Reciept.html"; // change to your page
     }
   });
 
