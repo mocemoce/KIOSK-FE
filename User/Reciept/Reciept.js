@@ -23,7 +23,13 @@ function updatePhilippineDateTime() {
   document.getElementById("ph-date").textContent = new Intl.DateTimeFormat('en-PH', optionsDate).format(now);
   document.getElementById("ph-time").textContent = new Intl.DateTimeFormat('en-PH', optionsTime).format(now);
 }
-
+// ⬅️ Back Button
+const backBtn = document.querySelector(".back-btn");
+if (backBtn) {
+  backBtn.addEventListener("click", () => {
+    window.location.href = "../ProfileRegistration/ProfileRegistration.html";
+  });
+}
 // Update immediately
 updatePhilippineDateTime();
 
