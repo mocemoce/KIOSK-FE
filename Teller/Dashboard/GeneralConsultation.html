@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>General Consultation</title>
+  <link rel="stylesheet" href="GeneralConsultation.css">
+</head>
+<body>
+  <header class="header">
+    <h1>General Consultation</h1>
+    <div class="user-menu">
+      <img src="../user-icon.png" alt="User Icon" class="user-icon" id="userIcon">
+      <div class="dropdown" id="dropdownMenu">
+        <a href="#">Logout</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="left-panel">
+      <div class="now-serving">
+        <p class="label">Now Serving No.</p>
+        <h2 class="serve-number">GC-001</h2>
+      </div>
+
+      <div class="queue">
+        <p class="queue-title">In Queue...</p>
+        <ul>
+          <li>GC-002</li>
+          <li>MT-002</li>
+          <li>P-MT-003</li>
+          <li>P-GC-004</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="right-panel">
+      <div class="controls">
+        <button>Page</button>
+        <button>Skip</button>
+        <button>Forward</button>
+        <button class="next">Next</button>
+      </div>
+
+      <div class="patient-info">
+        <h3>Patient Information</h3>
+        <label>Name:</label>
+        <input type="text" value="Juan Dela Cruz" readonly>
+        <label>Contact No.:</label>
+        <input type="text" value="09123456789" readonly>
+      </div>
+
+      <div class="remarks">
+        <h3>Remarks</h3>
+        <textarea readonly>Need to get medicine in Pharmacy and Dispensing Area</textarea>
+        <button class="save">Save</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="GeneralConsultation.js"></script>
+</body>
+</html>

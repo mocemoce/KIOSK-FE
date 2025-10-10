@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // 🕒 Philippine Date and Time
   const dateElem = document.getElementById("ph-date");
   const timeElem = document.getElementById("ph-time");
 
@@ -15,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
   updatePhilippineTime();
   setInterval(updatePhilippineTime, 1000);
 
-  // ✅ Multi-select departments
   const deptButtons = document.querySelectorAll(".dept-btn");
   const selectionInfo = document.querySelector(".selection-info");
 
@@ -48,7 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Proceed button
   const proceedBtn = document.querySelector(".proceed-btn");
   if (proceedBtn) {
     proceedBtn.addEventListener("click", (e) => {
@@ -60,12 +57,11 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      localStorage.setItem("selectedDepartment", JSON.stringify(selected)); // save multi-select
+      localStorage.setItem("selectedDepartment", JSON.stringify(selected)); 
       window.location.href = "../ProfileRegistration/ProfileRegistration.html";
     });
   }
 
-  // Back button
   const backBtn = document.querySelector(".back-btn");
   if (backBtn) {
     backBtn.addEventListener("click", () => {

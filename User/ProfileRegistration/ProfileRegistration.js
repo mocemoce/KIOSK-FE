@@ -1,4 +1,3 @@
-// 🕒 PH Time and Date
 function updatePhilippineDateTime() {
   const now = new Date();
   const optionsDate = { year:'numeric', month:'2-digit', day:'2-digit', timeZone:'Asia/Manila' };
@@ -10,7 +9,6 @@ function updatePhilippineDateTime() {
 updatePhilippineDateTime();
 setInterval(updatePhilippineDateTime, 1000);
 
-// ⬅️ Back Button
 const backBtn = document.querySelector(".back-btn");
 if (backBtn) {
   backBtn.addEventListener("click", () => {
@@ -18,7 +16,6 @@ if (backBtn) {
   });
 }
 
-// 🏫 Display Selected Department(s)
 window.addEventListener("DOMContentLoaded", () => {
   const selectedDepartments = JSON.parse(localStorage.getItem("selectedDepartment") || "[]");
   const displayElement = document.getElementById("department");
@@ -29,23 +26,20 @@ window.addEventListener("DOMContentLoaded", () => {
       : "No department selected";
   }
 
-  // ✅ Popup logic
   const proceedBtn = document.querySelector(".proceed-btn");
   const popup = document.getElementById("confirmation-popup");
   const popupOkBtn = document.getElementById("popup-ok-btn");
 
-  let popupShown = false; // flag to track popup
+  let popupShown = false; 
 
   proceedBtn.addEventListener("click", (e) => {
     e.preventDefault();
 
     if (!popupShown) {
-      // first click: show popup
       popup.style.display = "flex";
       popupShown = true;
     } else {
-      // second click: go to next page
-      window.location.href = "../Reciept/Reciept.html"; // change to your page
+      window.location.href = "../Reciept/Reciept.html"; 
     }
   });
 
