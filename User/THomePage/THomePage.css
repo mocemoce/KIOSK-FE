@@ -1,18 +1,22 @@
-/* =========================
-   🌐 Base Styles
-========================= */
-body {
-  font-family: Arial, sans-serif;
+
+html, body {
   margin: 0;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh; 
+  overflow: auto; 
 }
 
-/* =========================
-   🟦 Header
-========================= */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  align-items: center;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
 .header {
   width: 100%;
   background-color: #003366;
@@ -22,6 +26,7 @@ body {
   align-items: center;
   padding: 2.5rem 3rem;
   box-sizing: border-box;
+  flex-shrink: 0;
 }
 
 .logo-section {
@@ -57,19 +62,25 @@ body {
   padding: 0;
 }
 
-/* =========================
-   🟨 Main Container
-========================= */
-
 .main-container {
   width: 85%;
   max-width: 1200px;
   text-align: center;
-  margin-top: 80px;
-  position: relative;
+  flex-grow: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
+  .selection-info {
+    font-size: 2.1rem;
+    font-weight: bold;
+    color: #002855;
+    margin: 40px 0 20px;
+  }
 
-/* Back Button Container */
 .back-container {
   display: flex;
   justify-content: flex-start;
@@ -78,7 +89,6 @@ body {
   margin: 40px auto 0 auto;
 }
 
-/* Back Button */
 .back-btn {
   background-color: #dfecec;
   color: #000;
@@ -95,7 +105,6 @@ body {
   background-color: #a7edb3;
 }
 
-/* Section Title */
 .section-title {
   font-size: 2.4rem;
   font-weight: bold;
@@ -103,7 +112,6 @@ body {
   color: #000;
 }
 
-/* Department Buttons */
 .departments {
   display: flex;
   flex-direction: column;
@@ -133,7 +141,6 @@ body {
   color: #002855;
 }
 
-/* Proceed Button */
 .proceed-btn {
   background-color: #b8f6c3;
   border: none;
@@ -143,10 +150,7 @@ body {
   cursor: pointer;
   color: #000;
   font-weight: bold;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  transform: translateX(-50px);
+  margin-top: 20px;
   transition: background-color 0.3s ease;
 }
 
@@ -154,22 +158,14 @@ body {
   background-color: #a7edb3;
 }
 
-/* =========================
-   🦶 Footer
-========================= */
 .footer {
-  margin-top: 120px;
   font-size: 1.6rem;
   color: #444;
   text-align: center;
-  padding-bottom: 40px;
+  padding: 40px 0 20px;
+  flex-shrink: 0;
 }
 
-/* =========================
-   📱 Responsive Adjustments
-========================= */
-
-/* Medium screens (tablets or laptops) */
 @media (max-width: 1080px) {
   .logo {
     width: 100px;
@@ -185,7 +181,7 @@ body {
 
   .main-container {
     width: 90%;
-    margin-top: 50px;
+    margin-top: 0;
   }
 
   .back-btn,
@@ -224,14 +220,15 @@ body {
 
   .main-container {
     width: 95%;
-    margin-top: 40px;
+    margin-top: 0;
   }
 
   .back-container {
     width: 95%;
   }
 
-  .back-btn {
+  .back-btn,
+  .proceed-btn {
     padding: 14px 36px;
     font-size: 1.2rem;
   }
@@ -241,17 +238,17 @@ body {
     padding: 20px;
   }
 
-  .proceed-btn {
-    position: static;
-    margin-top: 20px;
-    transform: none;
-    padding: 14px 36px;
+  .section-title {
+    font-size: 1.4rem;
+    margin: 40px 0 30px;
   }
 
   .footer {
     font-size: 1rem;
+    padding: 20px 0;
   }
 }
+
 /* =========================
    💻 For 1080x1920 (Full HD vertical screens)
 ========================= */
@@ -259,18 +256,17 @@ body {
   html, body {
     width: 100%;
     height: 100%;
-    overflow: hidden; /* 🚫 Prevent scrolling */
+    overflow: hidden; 
   }
 
   body {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Space between header, main, footer */
+    justify-content: space-between; 
     align-items: center;
     background-color: #fff;
   }
 
-  /* ===== Header ===== */
   .header {
     width: 100%;
     background-color: #003366;
@@ -278,7 +274,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 3rem; /* Reduced padding to save space */
+    padding: 2rem 3rem;
     box-sizing: border-box;
     flex-shrink: 0;
   }
@@ -297,8 +293,6 @@ body {
     font-size: 1.8rem;
     line-height: 1.4;
   }
-
-  /* ===== Back Button ===== */
   .back-container {
     width: 85%;
     margin-top: 20px;
@@ -309,16 +303,14 @@ body {
     padding: 26px 110px;
     border-radius: 16px;
   }
-
-  /* ===== Main Container ===== */
   .main-container {
     width: 80%;
     max-width: 1200px;
     text-align: center;
-    flex-grow: 1; /* Stretch to fill available space */
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center vertically */
+    justify-content: center;
     align-items: center;
     margin: 0 auto;
   }
@@ -337,7 +329,7 @@ body {
 
   .dept-btn {
     font-size: 2.1rem;
-    padding: 38px 40px; /* Slightly shorter */
+    padding: 38px 40px;
     border-radius: 18px;
   }
 
@@ -354,8 +346,6 @@ body {
     border-radius: 18px;
     margin-top: 20px;
   }
-
-  /* ===== Footer ===== */
   .footer {
     font-size: 1.6rem;
     padding: 20px 0;

@@ -1,6 +1,3 @@
-/* =========================
-   🌐 Base Styles
-========================= */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -9,12 +6,9 @@ body {
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  overflow: hidden;
+  overflow: auto;
 }
 
-/* =========================
-   🟦 Header
-========================= */
 .header {
   width: 100%;
   background-color: #003366;
@@ -60,9 +54,6 @@ body {
   padding: 0;
 }
 
-/* =========================
-   ⬅️ Back Button
-========================= */
 .back-container {
   width: 85%;
   margin-top: 20px;
@@ -86,9 +77,6 @@ body {
   background-color: #a7edb3;
 }
 
-/* =========================
-   🩺 Main Content
-========================= */
 .main-content {
   flex-grow: 1;
   display: flex;
@@ -145,9 +133,6 @@ textarea {
   color: #333;
 }
 
-/* =========================
-   Priority Section
-========================= */
 .priority-section {
   display: flex;
   align-items: center;
@@ -155,23 +140,18 @@ textarea {
   gap: 15px;
 }
 
-/* Bigger checkbox */
 #priority {
   width: 40px;
   height: 40px;
   cursor: pointer;
 }
 
-/* Bigger label */
 .priority-section label {
   font-weight: 600;
   font-size: 2.4rem;
   cursor: pointer;
 }
 
-/* =========================
-   Proceed Button
-========================= */
 .proceed-btn {
   background-color: #b8f6c3;
   border: none;
@@ -190,9 +170,6 @@ textarea {
   background-color: #a7edb3;
 }
 
-/* =========================
-   🦶 Footer
-========================= */
 .footer {
   font-size: 1.6rem;
   color: #444;
@@ -201,11 +178,8 @@ textarea {
   flex-shrink: 0;
 }
 
-/* =========================
-   Confirmation Popup
-========================= */
 .popup-overlay {
-  display: none; /* hidden by default */
+  display: none; 
   position: fixed;
   top: 0;
   left: 0;
@@ -244,9 +218,6 @@ textarea {
   background-color: #a7edb3;
 }
 
-/* =========================
-   💻 Full HD (1080x1920)
-========================= */
 @media (min-width: 1000px) and (min-height: 1800px) {
   .form-container {
     padding: 70px 100px;
