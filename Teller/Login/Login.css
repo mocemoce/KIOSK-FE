@@ -32,10 +32,11 @@ body {
   box-sizing: border-box;
   z-index: 1;
   position: relative;
+  padding: 0.4rem 2rem;
 }
 
 .main-header h1 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 600;
   margin: 0;
   text-align: center;
@@ -49,7 +50,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.3rem;           
-  width: 720px;         
+  width: 520px;         
   z-index: 1;
 }
 
@@ -57,22 +58,21 @@ body {
 .login-container label {
   font-weight: 600;      
   color: #003366;
-  font-size: 2.3rem;     
+  font-size: 1.3rem;     
 }
 
 .login-container input {
-  padding: 1.5rem;        
+  padding: 1rem;        
   border: 2px solid #003366;
   border-radius: 12px;   
   background-color: transparent;
   outline: none;
-  color: hsl(210, 100%, 20%);
-  font-size: 1.3rem;    
+  color: hsl(210, 100%, 20%); 
 }
 
 .login-container input::placeholder {
   color: rgba(0, 51, 102, 0.6);
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .login-container button {
@@ -81,33 +81,63 @@ body {
   border: none;
   background-color: #b8f6c3;
   color: rgb(0, 0, 0);
-  font-size: 2.3rem;    
+  font-size: 1.3rem;    
   border-radius: 12px;
   cursor: pointer;
   transition: 0.3s ease;
-  width: 320px;
-  left: 56%;
+  width: 30%;
+  left: 70%;
 }
 
 .login-container button:hover {
   background-color: #a7edb3;
 }
-
-@media (max-width: 768px) {
-  .main-header h1 {
-    font-size: 1.8rem;
+@media only screen and (min-width: 1920px) and (min-height: 1080px) {
+  body {
+    background-color: #f4f6fb; /* keep same or adjust if needed */
+    overflow: hidden;
   }
 
   .bg-logo {
-    width: 60%;
-    left: 10%;
-    opacity: 0.3;
+    width: 55%; /* smaller since screen is large */
+    top: 55%;
+    left: 5%;
+    opacity: 0.5;
+  }
+
+  .main-header {
+    padding: 1.5rem 4rem;
+  }
+
+  .main-header h1 {
+    font-size: 2.8rem; /* slightly larger for 1080p */
   }
 
   .login-container {
-    top: 60%;
-    right: 50%;
-    transform: translate(50%, -50%);
-    width: 80%;
+    width: 520px; /* larger form area */
+    top: 50%;
+    right: 12%;
+    transform: translateY(-50%);
+  }
+
+  .login-container label {
+    font-size: 1.4rem;
+  }
+
+  .login-container input {
+    font-size: 1.4rem;
+    padding: 1.3rem;
+  }
+
+  .login-container input::placeholder {
+    font-size: 1.3rem;
+  }
+
+  .login-container button {
+    font-size: 2rem;
+    width: 30%;
+    left: 70%;
   }
 }
+
+

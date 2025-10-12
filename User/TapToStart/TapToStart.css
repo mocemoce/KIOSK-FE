@@ -19,7 +19,7 @@ html, body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.5rem 3rem;
+  padding: 0.8rem 1.8rem;
   box-sizing: border-box;
 }
 
@@ -29,31 +29,29 @@ html, body {
 }
 
 .logo {
-  width: 150px;
+  width: 60px;
   height: auto;
   background-color: white;
-  border-radius: 16px;
-  padding: 10px;
-  margin-right: 20px;
+  border-radius: 12px;
+  margin-right: 8px;
 }
 
 .title {
-  font-size: 2.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
 }
 
 .datetime {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  font-size: 1.6rem;
-  line-height: 1.6;
+  align-items: flex-end;
+  text-align: right;
+  font-size: 1rem;
+  line-height: 1.2;
 }
 
 .datetime p {
   margin: 0;
-  padding: 0;
 }
 
 .main-content {
