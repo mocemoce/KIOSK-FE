@@ -211,8 +211,78 @@ body{
     justify-content: center;   /* center text horizontally */
     align-items: center;       /* center text vertically */
   }
-  /* DEDELETE SOON */
   button:hover {
     background-color: #555;
+  }
+   /* ABOUT SA TABLE*/
+  /* Table container (for responsive scroll) */
+  .table-container {
+    overflow-x: auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 900px;
+  }
+
+  thead {
+    background-color: #003366;
+    color: #ffffff;
+  }
+
+  th, td {
+    text-align: center;
+    padding: 12px 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  tr:hover {
+    background-color: #f1f5f9;
+  }
+
+  th {
+    font-weight: bold;
+    letter-spacing: 0.5px;
+  }
+
+  td {
+    font-size: 15px;
+  }
+
+  /* Responsive: Stack table on small screens */
+  @media (max-width: 700px) {
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }
+
+    thead {
+      display: none;
+    }
+
+    tr {
+      margin-bottom: 15px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 10px;
+    }
+
+    td {
+      text-align: left;
+      padding: 8px 10px;
+      border: none;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    td::before {
+      content: attr(data-label);
+      font-weight: bold;
+      color: #003366;
+    }
   }
 
