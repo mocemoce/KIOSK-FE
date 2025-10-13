@@ -71,8 +71,6 @@ body{
     font-weight:700
 }
 
-
-
 /* Sidebar */
 .sidebar{
     grid-column:1;
@@ -120,15 +118,13 @@ body{
   align-self: flex-end;
 }
 
-
-
-
 /* Main content */
 .content{
     grid-column:2;
     grid-row:2;
     padding:18px;
     background:#fff
+    
 }
 .placeholder{
     border:2px dashed #d9e1ee;
@@ -148,10 +144,20 @@ body{
 
 /* Responsive */
 @media (max-width:900px){
-.app{grid-template-columns:80px 1fr}
-.title{display:none}
-.nav a{padding:12px 10px}
+.app{
+    grid-template-columns:80px 1fr
 }
+.title{
+    display:none
+}
+.nav a{
+    padding:12px 10px
+}
+.container .step{
+    grid-template-columns: repeat(2, minmax(180px, 1fr)); /* 2 columns */
+  }
+}
+
 
 .footer {
   font-size: 1rem;
@@ -160,4 +166,53 @@ body{
   padding: 10px 0;
   flex-shrink: 0;
 }
+
+.section-title {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #0e355a;
+  margin: 0;
+  padding: 10px 0;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+
+/*CSS NG REPORTS*/
+.date{
+    font-size: 1.3rem;
+    color: #003366;
+    text-align: center;
+}
+  .container {
+    display: flex;          /* make it a row */
+    flex-direction: row;    /* arrange children horizontally */
+    align-items: flex-end;  /* align inputs/buttons nicely */
+    gap: 20px;              /* spacing between steps */
+    flex-wrap: wrap;        /* allows wrap on small screens */
+  }
+    .step {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .generate-button {
+    width: 125px;      
+    height: 30px;                   /* fixed width */
+    background-color: #003366;   /* dark blue */
+    color: white;
+    border: none;
+    padding: 12px 40px;             /* controls height and width */
+    font-size: 14px;
+    border-radius: 20px;            /* rounded corners */
+    cursor: pointer;
+    text-align: center;                 /* center text horizontally */
+    display: flex;
+    justify-content: center;   /* center text horizontally */
+    align-items: center;       /* center text vertically */
+  }
+  /* DEDELETE SOON */
+  button:hover {
+    background-color: #555;
+  }
 

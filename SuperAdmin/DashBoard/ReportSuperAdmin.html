@@ -1,50 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ReportSuperAdmin</title>
-  <link rel="stylesheet" href="SuperAdmin.css">
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>ReportSuperAdmin</title>
+			<link rel="stylesheet" href="SuperAdmin.css">
+	</head>
 
 <body>  
-  <div class="app">
-<!-- Top bar -->
-  <div class="topbar">
-    <div class="brand">
-      <div class="iconlogo" aria-hidden="true">
-        <img src="../Logo.png" alt="Ziontech Logo" class="logo">
-      </div>
-        <div class="title">Z‑Kiosk Pro</div>
-    </div>
-        <div class="datetime">
-            <p id="ph-date">09/22/2025</p>
-            <p id="ph-time">11:00:09 AM</p>
-        </div>
-  </div>
+	<div class="app">
+<!-- Topbar -->
+		<div class="topbar">
+			<div class="brand">
+				<div class="iconlogo" aria-hidden="true">
+					<img src="../Logo.png" alt="Ziontech Logo" class="logo">
+				</div>
+				<div class="title">Z‑Kiosk Pro</div>
+			</div>
+			<div class="datetime">
+				<p id="ph-date">09/22/2025</p>
+				<p id="ph-time">11:00:09 AM</p>
+			</div>
+		</div>
 
 
 <!-- Sidebar -->
-    <aside class="sidebar" aria-label="Sidebar">
-      <nav class="nav" aria-label="Primary">
-        <h3>Welcome Super Admin</h3>
-        <a href="DashboardSuperAdmin.html">Dashboard</a>
-        <a class="active" href="ReportSuperAdmin.html">Reports</a>
-        <a href="AccountSuperAdmin.html">Accounts</a>
-        <a href="ResetPasswordSuperAdmin.html">Reset Password</a>
-      </nav>
-      <div>
-        <button class="logout-button" href="LoginSuperAdmin.html">Log Out</button>
-      </div>
-    </aside>
+		<aside class="sidebar" aria-label="Sidebar">
+			<nav class="nav" aria-label="Primary">
+				<h3>Welcome Super Admin</h3>
+				<a href="DashboardSuperAdmin.html">Dashboard</a>
+				<a class="active" href="ReportSuperAdmin.html">Reports</a>
+				<a href="AccountSuperAdmin.html">Accounts</a>
+				<a href="ResetPasswordSuperAdmin.html">Reset Password</a>
+			</nav>
+			<div>
+				<button class="logout-button" href="LoginSuperAdmin.html">Log Out</button>
+			</div>
+		</aside>
 
+<!-- SA LOOB MAIN CONENT-->
+		<main class="content" aria-live="polite">
+			<div class="placeholder">
+				<h2 class="section-title">REPORTS</h2>                          
+				<div class="header">
+					<label for="department">Select Department:</label>
+					<select id="department" class="combo">
+						<option value="" disabled selected>Choose Department</option>
+						<option>General Consultation</option>
+						<option>Dental</option>
+						<option>Pediatrics</option>
+						<option>OB-Gyne</option>
+						<option>ENT</option>
+						<option>Dermatology</option>
+						<option>Ophthalmology</option>
+					</select>
+				</div>
+<!-- PANG UNANG ROW-->
+				<div class="container">
+					<div class="step">
+						<label for="start">Step 1: Select Start Date:</label>
+					</div>
+					<div class="step">
+						<label for="end">Step 2: Select End Date:</label>
+					</div>
+					<div class="step">
+						<label>Step 3: Click the Generate Button</label>
+					</div>
+					<div>
+						<label for="search">Search:</label>
+						<input type="text" id="search">
+					</div>
+				</div>
 
-    <main class="content" aria-live="polite">
-      <div class="placeholder"></div>
-    </main>
-  </div>
+				<div class="container"><!-- PANGALAWA ROW-->
+					<div class="step">
+						<input class ="date" type="date" id="start" value="2025-09-01">
+					</div>
+					<div class="step">
+						<input class ="date" type="date" id="end" value="2025-09-15">
+					</div>
+					<div class="step">
+						<button class="generate-button">Generate</button>
+					</div>
+					<div>
+						<button class="export-button">Export</button>
+					</div>  
+				</div>
+			</div>
+		</main>
+	</div>
 </body>
-  <script src="DashboardSuperAdmin.js"></script>
+
+<script src="DashboardSuperAdmin.js"></script>
 <footer class="footer">
     Powered by <b>ZionTech</b>
 </footer>
