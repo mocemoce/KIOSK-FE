@@ -53,27 +53,22 @@ body{
     gap:10px
 }
 
-.logo{
-    width:36px;
-    height:36px;
-    border-radius:999px;
+.iconlogo{
+    width:63px;
+    height:55px;
+    border-radius:2000px;
     background:#fff;
     display:grid;
     place-items:center
-}
-
-.logo svg{
-    width:24px;
-    height:24px
+} 
+ .logo {
+    width: 65px;
+    border-radius: 20px;
+    padding: 3px;
 }
 
 .title{
     font-weight:700
-}
-
-.clock{
-    font-weight:600;
-    opacity:.95
 }
 
 
@@ -126,14 +121,28 @@ body{
 }
 
 
+
+
 /* Main content */
-.content{grid-column:2;grid-row:2;padding:18px;background:#fff}
+.content{
+    grid-column:2;
+    grid-row:2;
+    padding:18px;
+    background:#fff
+}
 .placeholder{
     border:2px dashed #d9e1ee;
     border-radius:14px;
     height:100%;
     min-height:280px;
     background:#fff
+}
+.datetime {
+    font-size: 1.0rem;
+    line-height: 0.9;
+  }
+.datetime p {
+  margin: 0;
 }
 
 
@@ -143,3 +152,12 @@ body{
 .title{display:none}
 .nav a{padding:12px 10px}
 }
+
+.footer {
+  font-size: 1rem;
+  color: #444;
+  text-align: center;
+  padding: 10px 0;
+  flex-shrink: 0;
+}
+
