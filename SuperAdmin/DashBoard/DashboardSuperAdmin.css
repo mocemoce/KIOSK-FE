@@ -114,8 +114,15 @@ body{
     background:#ecf2f8
 }
 
-.logout{
-    color:#a11
+.logout-button {
+  background-color: #003366;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  align-self: flex-end;
 }
 
 
